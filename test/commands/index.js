@@ -1,4 +1,4 @@
-describe('integration tests', function () {
+describe('integration tests', function() {
     require('./cache/list');
     require('./cache/clean');
     require('./help');
@@ -15,7 +15,5 @@ describe('integration tests', function () {
     require('./uninstall');
     require('./update');
     require('./version');
-
-    // run last because it changes defaults
     require('./bower');
 });

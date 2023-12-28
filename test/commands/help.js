@@ -2,13 +2,12 @@ var expect = require('expect.js');
 var helpers = require('../helpers');
 var help = helpers.command('help');
 
-describe('bower help', function () {
-
+describe('bower help', function() {
     it('correctly reads arguments', function() {
         expect(help.readOptions(['foo'])).to.eql(['foo']);
     });
 
-    it('shows general help', function () {
+    it('shows general help', function() {
         return helpers.run(help).spread(function(result) {
             expect(result.usage[0]).to.be.a('string');
             expect(result.commands).to.be.a('object');
@@ -17,10 +16,21 @@ describe('bower help', function () {
     });
 
     var commands = [
-        'home', 'info', 'init', 'install',
-        'link', 'list', 'lookup', 'prune', 'register',
-        'search', 'update', 'uninstall', 'version',
-        'cache list', 'cache clean'
+        'home',
+        'info',
+        'init',
+        'install',
+        'link',
+        'list',
+        'lookup',
+        'prune',
+        'register',
+        'search',
+        'update',
+        'uninstall',
+        'version',
+        'cache list',
+        'cache clean'
     ];
 
     commands.forEach(function(command) {
